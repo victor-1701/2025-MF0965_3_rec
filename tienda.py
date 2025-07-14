@@ -3,7 +3,6 @@ class Producto:
         self.codigo = codigo
         self.nombre = nombre
         self.precio = precio
-        pass
 
     def __str__(self):
 
@@ -22,11 +21,9 @@ def buscar_producto(inventario, codigo_buscar):
 
 
 def mostrar_inventario(inventario):
-    """
-    COMPLETAR 4:
-    Imprime por pantalla todos los productos que hay en 'inventario'.
-    """
+
     print("\n--- INVENTARIO ACTUAL ---")
+    
     if not inventario:
         print("El inventario está vacío.")
     else:
