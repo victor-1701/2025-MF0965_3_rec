@@ -6,17 +6,13 @@ class Producto:
 
     def __str__(self):
 
-       return f"{self.codigo}, {self.nombre}, {self.precio}"
+       return f"{self.codigo}, {self.nombre}, {self.precio} €"
 
         
 
 
 def buscar_producto(inventario, codigo_buscar):
-    """
-    COMPLETAR 3:
-    Busca en 'inventario' un producto cuyo código coincida con 'codigo_buscar'.
-    Si lo encuentra, devuelve dicho objeto; si no, devuelve None.
-    """
+
     pass
 
 
@@ -27,7 +23,9 @@ def mostrar_inventario(inventario):
     if not inventario:
         print("El inventario está vacío.")
     else:
-        pass
+        for producto in inventario:
+                print(producto)
+
 
 
 def calcular_valor_total(inventario):
@@ -61,12 +59,8 @@ def main():
         elif opcion == '2':
             codigo_buscar = input("Ingrese el código del producto a buscar: ")
             producto_encontrado = buscar_producto(inventario, codigo_buscar)
-            """
-            COMPLETAR 6:
-            Comprueba si 'producto_encontrado' es distinto de None.
-            Si se encontró, imprime ">> Producto encontrado:" y luego el producto.
-                     Si no, imprime ">> No se encontró ningún producto con ese código."
-            """
+            if producto_encontrado != None:
+                print("Producto encontrado: ",  )
 
         elif opcion == '3':
             valor_total = calcular_valor_total(inventario)
